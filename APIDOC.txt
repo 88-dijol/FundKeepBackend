@@ -1,0 +1,119 @@
+Schema:User
+
+attributes:Username,password,email
+
+
+1)Api:for creating a new user account
+
+    url: http://127.0.0.1:8000/api/register/
+
+    method:post
+
+    body:{username,password,email}
+
+    Authentication:nill
+
+    status:completed
+
+2)Api for fetching  token
+
+    url: http://127.0.0.1:8000/api/token/
+
+    method:post
+
+    body:{username,email}
+
+    Authentication:nill
+
+    status:completed
+
+==============================================end auth======================================================
+
+Schema:Expense
+
+attributes=title,amount,category,owner,priority
+
+
+1)api:for listing all expenses
+
+    url: http://127.0.0.1:8000/api/expenses/
+
+    method:get
+
+    body:nill
+
+    Authentication:token
+
+    status:completed
+
+2)api:adding an expense
+
+    
+    url: http://127.0.0.1:8000/api/expenses/
+
+    method:post
+
+    body:{title,amount,category,priority}
+
+    Authentication:token
+
+    status:completed
+
+3)api:listing an expense of an owner
+
+    url: http://127.0.0.1:8000/api/expenses/id/
+
+    method:get
+
+    body:nill
+
+    Authentication:token
+
+    status:completed
+
+4)api:updating an expense of a particular owner
+
+    url: http://127.0.0.1:8000/api/expenses/id/
+
+    method:put
+
+    body:{title,amount,category,priority}
+
+    Authentication:token
+
+    status:completed
+
+
+4)api:deleting an expense of a particular owner
+
+    url: http://127.0.0.1:8000/api/expenses/id/
+
+    method:delete
+
+    body:nill
+
+    Authentication:token
+
+    status:completed
+=====================================Income=========================================
+
+Schema:Income
+
+attributes:title,amount,owner,category
+
+1)api:for listing all incomes
+
+    url: http://127.0.0.1:8000/api/incomes/
+
+    method:get
+
+    body:nill
+
+    Authentication:token
+
+    status:pending
+
+
+
+
+
